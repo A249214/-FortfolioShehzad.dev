@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Shehzad Ali — Portfolio</title>
+  <meta name="description" content="Muhammad Shehzad Ali — Passionate Frontend Developer from Peshawar, Pakistan. 2+ years of experience creating modern, responsive websites." />
+  <meta name="keywords" content="Muhammad Shehzad Ali, Frontend Developer, Web Development, Portfolio, Peshawar" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+      <!-- box icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./style.css" />
+
+</head>
+<body>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor-outer" id="cursorOuter"></div>
+  <div class="cursor-inner" id="cursorInner"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- ===== PRELOADER ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">S<span>.</span></div>
+      <div class="preloader-bar">
+        <div class="preloader-progress" id="preloaderProgress"></div>
+      </div>
+      <p class="preloader-text">Loading...</p>
+    </div>
+  </div>
+  
+  <!-- ===== WHATSAPP FLOAT ===== -->
+  <a href="https://wa.me/923189440776" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="header" id="header">
+    <nav class="navbar">
+      <a href="#home" class="nav-logo">
+        <i class="fa-solid fa-circle-dot"></i> Shehzad<span>.</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#resume" class="nav-link" data-section="resume">Resume</a></li>
+        <li><a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="tel:+923189440776" class="nav-phone">
+          <i class="fa-solid fa-phone"></i> +92 318 9440776
+        </a>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-stars" id="starsBg"></div>
+    <div class="hero-left">
+      <div class="hero-content">
+        <p class="hero-hello">Hello, I'm</p>
+        <h1 class="hero-name">Muhammad<br /><span>Shehzad</span><br />Ali</h1>
+        <div class="hero-role-wrapper">
+          <span class="hero-role" id="heroRole">Web Developer</span>
+        </div>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary">Hire Me</a>
+          <a href="#portfolio" class="btn btn-outline">My Work</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/" target="_blank" class="social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/muhammad-shehzad-ali-67a84635b/" target="_blank" class="social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="+923189440776" target="_blank" class="social-icon" title="Whatsapp"><i class="bx bxl-whatsapp"></i></a>
+          <a href="mailto:muhammadshehzadali022@gmail.com" class="social-icon" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-wrapper">
+        <div class="hero-img-bg"></div>
+        <img src="./my photo hero image.jpeg" alt="Muhammad Shehzad Ali" class="hero-img hero-img-1" id="heroImg1" />
+        <img src="./my photo.jpeg" alt="Muhammad Shehzad Ali" class="hero-img hero-img-2" id="heroImg2" />
+        <div class="hero-img-ring ring-1"></div>
+        <div class="hero-img-ring ring-2"></div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">ABOUT ME</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-img-col">
+          <div class="about-img-frame">
+            <img src="./my photo.jpeg" alt="Muhammad Shehzad Ali" class="about-img" />
+            <div class="about-img-overlay">
+              <span class="exp-badge"><strong>2+</strong> Years<br/>Experience</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-info-col">
+          <h3 class="about-greeting">Hi There! I'm <span>Muhammad Shehzad Ali</span></h3>
+          <p class="about-role-tag">Web Developer</p>
+          <p class="about-desc">I am a passionate Frontend Developer with a strong focus on creating beautiful, responsive web experiences. I turn ideas into functional, elegant web applications that users love — combining clean code with creative design.</p>
+          <div class="about-details">
+            <div class="detail-row"><span class="detail-label">Name</span><span class="detail-sep">:</span><span class="detail-val">Muhammad Shehzad Ali</span></div>
+            <div class="detail-row"><span class="detail-label">City</span><span class="detail-sep">:</span><span class="detail-val">Peshawar, Pakistan</span></div>
+            <div class="detail-row"><span class="detail-label">Nationality</span><span class="detail-sep">:</span><span class="detail-val">Pakistani</span></div>
+            <div class="detail-row"><span class="detail-label">Experience</span><span class="detail-sep">:</span><span class="detail-val">2+ Years</span></div>
+            <div class="detail-row"><span class="detail-label">Full Time</span><span class="detail-sep">:</span><span class="detail-val available">Available</span></div>
+            <div class="detail-row"><span class="detail-label">Phone</span><span class="detail-sep">:</span><span class="detail-val"><a href="tel:+923189440776">(+92) 318 9440776</a></span></div>
+            <div class="detail-row"><span class="detail-label">Email</span><span class="detail-sep">:</span><span class="detail-val"><a href="mailto:muhammadshehzadali022@gmail.com">muhammadshehzadali022@Gmail.com</a></span></div>
+            <div class="detail-row"><span class="detail-label">Languages</span><span class="detail-sep">:</span><span class="detail-val">English, Urdu, Pashto</span></div>
+          </div>
+          <a href="./Assest/Muhammad_Shehzad_Ali_Updated_Resume_2.pdf" class="btn btn-primary mt-30" download="Muhammad_Shehzad_Ali_Updated_Resume_2.pdf">
+            <i class="fa-solid fa-download"></i> Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">MY SKILLS</span>
+        <h2 class="section-title">My Skills</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skills-left">
+          <h3>All the skills that I have in that field of work are mentioned.</h3>
+          <p>I specialize in building modern, performant web applications with a focus on user experience and clean code. Always learning, always growing.</p>
+        </div>
+        <div class="skills-right">
+          <div class="skill-item" data-percent="90">
+            <div class="skill-info"><span class="skill-name">HTML / CSS</span><span class="skill-percent">90%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-item" data-percent="85">
+            <div class="skill-info"><span class="skill-name">JavaScript</span><span class="skill-percent">85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-item" data-percent="75">
+            <div class="skill-info"><span class="skill-name">React.js</span><span class="skill-percent">75%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          </div>
+          <div class="skill-item" data-percent="80">
+            <div class="skill-info"><span class="skill-name">UI/UX Design</span><span class="skill-percent">80%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-item" data-percent="70">
+            <div class="skill-info"><span class="skill-name">Graphic Design</span><span class="skill-percent">70%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+          </div>
+          <div class="skill-item" data-percent="85">
+            <div class="skill-info"><span class="skill-name">Responsive Design</span><span class="skill-percent">85%</span></div>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESUME SECTION ===== -->
+  <section class="section resume-section" id="resume">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">RESUME</span>
+        <h2 class="section-title">Resume</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="resume-grid">
+        <!-- Experience -->
+        <div class="resume-col">
+          <h3 class="resume-col-title"><i class="fa-solid fa-briefcase"></i> Experience</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4 class="tl-role">Frontend Developer</h4>
+                <span class="tl-date">2025 – Present</span>
+                <h5 class="tl-company">Larner Agency</h5>
+                <p>Building responsive web applications, optimizing performance, implementing modern UI components and delivering high-quality projects.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4 class="tl-role">Junior Web Developer</h4>
+                <span class="tl-date">2023 – 2024</span>
+                <h5 class="tl-company">Freelance</h5>
+                <p>Designed and developed 15+ websites for small businesses, ensuring mobile responsiveness and cross-browser compatibility.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4 class="tl-role">Web Design Intern</h4>
+                <span class="tl-date">2022 – 2023</span>
+                <h5 class="tl-company">Digital Studio</h5>
+                <p>Assisted senior developers in creating landing pages, managing CMS content, and improving website UX/performance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Education -->
+        <div class="resume-col">
+          <h3 class="resume-col-title"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4 class="tl-role">BS Computer Science</h4>
+                <span class="tl-date">2021 – 2025</span>
+                <h5 class="tl-company">University of Peshawar</h5>
+                <p>Focus on Web Development, Database Systems, and Software Engineering. Strong academic foundation in computer science.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4 class="tl-role">Web Development Certification</h4>
+                <span class="tl-date">2023</span>
+                <h5 class="tl-company">SMIT (Saylani Mass IT Training)</h5>
+                <p>Completed intensive 6-month program in modern web technologies including React, Node.js, and MongoDB.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h4 class="tl-role">UI/UX Design</h4>
+                <span class="tl-date">2025</span>
+                <h5 class="tl-company">SMIT</h5>
+                <p>Advanced design principles, Figma prototyping, user research, and usability testing methodologies.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">SERVICES</span>
+        <h2 class="section-title">What I Do</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Modern responsive websites with clean code and optimal performance. From landing pages to full web apps.</p>
+          <div class="service-num">01</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Beautiful, intuitive interfaces that users love. Wireframes, prototypes and pixel-perfect designs.</p>
+          <div class="service-num">02</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
+          <h3>Graphic Design</h3>
+          <p>Creative branding, logos, and visual identity systems that make your brand stand out.</p>
+          <div class="service-num">03</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-film"></i></div>
+          <h3>Video Editing</h3>
+          <p>Professional video editing and motion graphics for promotional content and social media.</p>
+          <div class="service-num">04</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <h3>Responsive Design</h3>
+          <p>Mobile-first development ensuring your website looks perfect on all devices and screen sizes.</p>
+          <div class="service-num">05</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <h3>SEO Optimization</h3>
+          <p>Optimizing your web presence for search engines to drive organic traffic and visibility.</p>
+          <div class="service-num">06</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO SECTION ===== -->
+  <section class="section portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">PORTFOLIOS</span>
+        <h2 class="section-title">My Portfolio</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Dev</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="app">Apps</button>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid">
+        <div class="portfolio-item" data-category="web">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop" alt="Portfolio Website" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <h4>Portfolio Website</h4>
+                <p>HTML5, CSS3, JavaScript</p>
+                <div class="portfolio-links">
+                  <a href="https://my-fortfolio-jet.vercel.app/" target="_blank" class="pf-link"><i class="fa-solid fa-link"></i></a>
+                  <a href="#" target="_blank" class="pf-link"><i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-num">01</div>
+        </div>
+        <div class="portfolio-item" data-category="app">
+          <div class="portfolio-img-wrap">
+            <img src="./weather app.png" alt="Weather App" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <h4>Weather App Dashboard</h4>
+                <p>JavaScript, API, CSS3</p>
+                <div class="portfolio-links">
+                  <a href="#" target="_blank" class="pf-link"><i class="fa-solid fa-link"></i></a>
+                  <a href="#" target="_blank" class="pf-link"><i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-num">02</div>
+        </div>
+        <div class="portfolio-item" data-category="web">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" alt="E-Commerce UI" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <h4>E-Commerce UI</h4>
+                <p>React, TailwindCSS</p>
+                <div class="portfolio-links">
+                  <a href="#" target="_blank" class="pf-link"><i class="fa-solid fa-link"></i></a>
+                  <a href="#" target="_blank" class="pf-link"><i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-num">03</div>
+        </div>
+        <div class="portfolio-item" data-category="design">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&h=400&fit=crop" alt="Brand Identity" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <h4>Brand Identity Design</h4>
+                <p>Figma, Adobe XD</p>
+                <div class="portfolio-links">
+                  <a href="#" target="_blank" class="pf-link"><i class="fa-solid fa-link"></i></a>
+                  <a href="#" target="_blank" class="pf-link"><i class="fa-brands fa-behance"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-num">04</div>
+        </div>
+        <div class="portfolio-item" data-category="app">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Dashboard App" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <h4>Analytics Dashboard</h4>
+                <p>React, Chart.js, API</p>
+                <div class="portfolio-links">
+                  <a href="#" target="_blank" class="pf-link"><i class="fa-solid fa-link"></i></a>
+                  <a href="#" target="_blank" class="pf-link"><i class="fa-brands fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-num">05</div>
+        </div>
+        <div class="portfolio-item" data-category="design">
+          <div class="portfolio-img-wrap">
+            <img src="https://images.unsplash.com/photo-1587440871875-191322ee64b0?w=600&h=400&fit=crop" alt="UI Kit" />
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <h4>Mobile UI Kit</h4>
+                <p>Figma, Adobe Illustrator</p>
+                <div class="portfolio-links">
+                  <a href="#" target="_blank" class="pf-link"><i class="fa-solid fa-link"></i></a>
+                  <a href="#" target="_blank" class="pf-link"><i class="fa-brands fa-dribbble"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-num">06</div>
+        </div>
+      </div>
+      <div class="portfolio-section-container-btn">
+       <a href="#" class="btn btn-primary mt-30">
+         See More
+          </a>
+        </div>
+    </div>
+
+    
+  </section>
+
+  <!-- ===== TESTIMONIALS SECTION ===== -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">REVIEWS</span>
+        <h2 class="section-title">Client Reviews</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="testimonials-slider" id="testimonialsSlider">
+        <div class="testimonial-track" id="testimonialTrack">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"Muhammad delivered an exceptional portfolio website. His attention to detail, clean code, and creative design exceeded all expectations. Highly recommend!"</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/60?img=12" alt="Richard Miles" />
+              <div><strong>Richard Miles</strong><span>Product Manager</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"Working with Shehzad was a pleasure. He understood our requirements perfectly and delivered a stunning e-commerce site on time and within budget."</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/60?img=5" alt="Vesta Shufelt" />
+              <div><strong>Vesta Shufelt</strong><span>CEO, DesignHub</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"Excellent work! The website looks professional and loads incredibly fast. The animations and transitions are smooth and the design is top-notch."</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/60?img=8" alt="Joseph Alves" />
+              <div><strong>Joseph Alves</strong><span>Marketing Director</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p>"Shehzad transformed our old website into a modern, responsive experience. Our bounce rate dropped significantly and conversions improved dramatically!"</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/60?img=15" alt="Sarah Ahmad" />
+              <div><strong>Sarah Ahmad</strong><span>Business Owner</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn prev-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn next-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">CONTACT ME</span>
+        <h2 class="section-title">Let's Work Together</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-desc">Have a project in mind? I'm available for freelance work, collaborations, and full-time opportunities. Let's build something amazing together.</p>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span>Email</span>
+                <a href="mailto:muhammadshehzadali022@gmail.com">muhammadshehzadali022@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <span>Phone</span>
+                <a href="tel:+923189440776">+92 318 9440776</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <span>Address</span>
+                <p>Peshawar, Pakistan</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com" target="_blank" class="social-icon"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://dribbble.com" target="_blank" class="social-icon"><i class="fa-brands fa-dribbble"></i></a>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="fromName" name="from_name" placeholder="Your Name" required />
+                <label for="fromName">Your Name</label>
+              </div>
+              <div class="form-group">
+                <input type="email" id="fromEmail" name="from_email" placeholder="Your Email" required />
+                <label for="fromEmail">Your Email</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder="Subject" required />
+              <label for="subject">Subject</label>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+              <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#home" class="footer-logo">
+          <i class="fa-solid fa-circle-dot"></i> Shehzad<span>.</span>
+        </a>
+        <p class="footer-text">© 2026 Muhammad Shehzad Ali. All rights reserved. Built with ❤️ in Peshawar.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/muhammad-shehzad-ali-67a84635b/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>
