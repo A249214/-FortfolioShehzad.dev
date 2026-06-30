@@ -457,6 +457,12 @@ filterBtns.forEach((btn) => {
   });
 });
 
+const portfolioSeeMoreLink = document.querySelector('.portfolio-section-container-btn a');
+if (portfolioSeeMoreLink) {
+  portfolioSeeMoreLink.setAttribute('target', '_blank');
+  portfolioSeeMoreLink.setAttribute('rel', 'noopener noreferrer');
+}
+
 // =============================================
 // 10. TESTIMONIALS SLIDER
 // =============================================
